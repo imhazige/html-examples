@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>默认的行内元素是一行</div>
+      <span>行内元素 span 1</span>
+      <span>行内元素 span 2</span>
+    </div>
+    <div>
+      <div>但是可以通过display:block样式来修改 -- 不好的写法</div>
+      <span style="display:block">行内元素 span display:block</span>
+      <span>行内元素 span 2</span>
+    </div>
+    <div>
+      <div>span里面放div -- 不好的写法</div>
+      <span style="display:block"
+        ><div>span里的div1</div>
+        <div>span里的div2</div></span
+      >
+      <span>行内元素 span 2</span>
+    </div>
+  </body>
+</html>

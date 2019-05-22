@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        border: 0px solid red;
+      }
+      * {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>行内元素只有margin left right有效</div>
+    <div>
+      <span style="border-width:1px;margin-bottom: 10px">行内元素 span 1</span>
+    </div>
+    <div>
+      <span style="border-width:1px;margin-top: 20px">行内元素 span 2</span>
+    </div>
+    <div>
+      <div>块元素margin塌陷-取上下间较大的margin而不是累加</div>
+      <div style="border-width:1px;margin-bottom: 10px">
+        div 1 margin-bottom: 10px
+      </div>
+      <div style="border-width:1px;margin-top: 20px">
+        div 2 margin-top: 20px
+      </div>
+    </div>
+    <div>
+      <div>行内元素display:block与块元素一样</div>
+      <div>
+        <span style="display:block;border-width:1px;margin-bottom: 10px"
+          >行内元素 span 1</span
+        >
+      </div>
+      <div>
+        <span style="display:block;border-width:1px;margin-top: 20px"
+          >行内元素 span 2</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
