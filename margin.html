@@ -5,9 +5,10 @@
     <style>
       * {
         border: 0px solid red;
-      }
-      * {
         margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
       }
     </style>
   </head>
@@ -39,6 +40,12 @@
         <span style="display:block;border-width:1px;margin-top: 20px"
           >行内元素 span 2</span
         >
+      </div>
+    </div>
+    <div>
+      <label>父子关系margin是到父元素padding的边界</label>
+      <div class="debug" style="padding: 10px;">
+        <div class="debug" style="margin:10px;">子元素</div>
       </div>
     </div>
   </body>
