@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>浮动</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      定位
+    </h1>
+    <div>
+      <h2>relative</h2>
+      <p>元素原来的位置仍然被计算</p>
+      <div style="">
+        <div class="debug" style="position:relative;top:-2px;">
+          元素1 relative top:-2px;
+        </div>
+        <div class="debug" style="">元素2</div>
+      </div>
+    </div>
+    <!--  -->
+    <div>
+      <h2>absolute</h2>
+      <p>
+        absolute的定位需要依据<a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block"
+          >containing block </a
+        >(递归找到最近的position不是static的祖先元素),
+        如果找不到则无效，如果直接在body下面,body 可算作initial containing
+        block.则起效。
+      </p>
+      <div style="position:relative">
+        <div class="debug" style="position:absolute;left:200px;">
+          元素1 relative left:200px;
+        </div>
+        <div class="debug" style="">元素2</div>
+      </div>
+    </div>
+    <!--  -->
+    <div>
+      <h2>fixed</h2>
+      <p>fixed基本上可认为是针对屏幕的定位。也有例外但不多见。</p>
+      <div style="">
+        <div class="debug" style="position:fixed;top:-2px;">
+          元素1 fixed top:-2px;
+        </div>
+        <div class="debug" style="">元素2</div>
+      </div>
+    </div>
+    <!--  -->
+    <div>
+      <h2>sticky</h2>
+      <p>sticky是相对于最近的具有滚动内容的父元素固定</p>
+      <div style="height:200px;width:200px;overflow-y:scroll;">
+        <div class="debug" style="position: sticky;top:0px;">
+          元素1 sticky top:0px;
+        </div>
+        <div class="debug" style="">
+          元素2,很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+        </div>
+        <div class="debug" style="">
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+          很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高很高
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
