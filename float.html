@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>浮动</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      参见
+      <a href="http://www.w3school.com.cn/css/css_positioning_floating.asp"
+        >浮动</a
+      >
+    </p>
+
+    <div>
+      <h1>示例1</h1>
+      <p>
+        元素2没有浮动，占据了元素1的位子，但是，元素2的文本显示依然需要依据左边的浮动元素来决定
+      </p>
+      <div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素1
+        </div>
+        <div
+          class="debug"
+          style="border-color:aquamarine;height:110px;width:210px;"
+        >
+          元素2
+        </div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素3
+        </div>
+        <p>
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字；
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h1>示例2</h1>
+      <p>
+        元素2没有浮动，占据了元素1的位子，由于元素2宽度不够支撑文本，所以文本单独被挤下去了
+      </p>
+      <div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素1
+        </div>
+        <div
+          class="debug"
+          style="border-color:aquamarine;height:110px;width:110px;"
+        >
+          元素2
+        </div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素3
+        </div>
+        <p>
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字；
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h1>示例3</h1>
+      <p>
+        元素2没有浮动，本应占据了元素1的位子，但由于clear:left,只能另取一行
+      </p>
+      <div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素1
+        </div>
+        <div
+          class="debug"
+          style="border-color:aquamarine;height:110px;width:110px;clear:left;"
+        >
+          元素2
+        </div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素3
+        </div>
+        <p>
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字； 一大段文字； 一大段文字； 一大段文字；
+          一大段文字； 一大段文字；
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h1>示例4</h1>
+      <p>
+        需要一个元素来清除浮动得到一个正常流布局的元素。
+      </p>
+      <div style="background-color: gray;">
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素1 float
+        </div>
+        <div
+          class="debug"
+          style="border-color:aquamarine;height:110px;width:110px;float:left;"
+        >
+          元素2 float
+        </div>
+        <div class="debug" style="height:100px;width:100px;float:left;">
+          元素3 float
+        </div>
+        <div style="clear: both;">
+          元素4正常流布局元素,必须要clear: both; 来使得父元素包含所有子元素box
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
