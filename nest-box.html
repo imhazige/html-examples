@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>margin</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label
+        >子元素高度设置比父元素大,子元素撑出,子元素的margin并未成为父元素的margin</label
+      >
+      <div class="debug" style="height:100px;display:block; ">
+        <div
+          class="debug"
+          style="height:200px;border-color:green;margin-bottom:10px;"
+        >
+          子元素
+        </div>
+      </div>
+      <div class="debug" style="height:100px;">父元素相邻元素</div>
+    </div>
+  </body>
+</html>
