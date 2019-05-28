@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>圆角</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+      .h-center {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+        >圆角
+      </a>
+    </h1>
+    <p>
+      <img src="./border-radius.png" />
+      若使用除号则表示 semi-major(半长轴,横轴)/ semi-minor(半短轴,竖轴)
+      是用数字如果过大则没有什么效果; 使用百分号表示相对于元素盒子的高宽
+    </p>
+    <!--  -->
+    <div>
+      <h2>圆角1</h2>
+      <p></p>
+      <div class="debug" style="">
+        <div class="debug h-center" style="width:200px;border-radius:1000px;">
+          元素1
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
