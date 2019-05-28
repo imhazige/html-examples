@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>移动端 rem单位</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+        font-size: 0.16rem;
+      }
+      .debug {
+        border-width: 0.01rem;
+      }
+    </style>
+    <script>
+      //https://www.jianshu.com/p/e96ccb603a50
+      !(function(e) {
+        function t(a) {
+          if (i[a]) return i[a].exports;
+          var n = (i[a] = { exports: {}, id: a, loaded: !1 });
+          return (
+            e[a].call(n.exports, n, n.exports, t), (n.loaded = !0), n.exports
+          );
+        }
+        var i = {};
+        return (t.m = e), (t.c = i), (t.p = ''), t(0);
+      })([
+        function(e, t) {
+          'use strict';
+          Object.defineProperty(t, '__esModule', { value: !0 });
+          var i = window;
+          (t['default'] = i.flex = function(e, t) {
+            var a = e || 100,
+              n = t || 1,
+              r = i.document,
+              o = navigator.userAgent,
+              d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+              l = o.match(/U3\/((\d+|\.){5,})/i),
+              c = l && parseInt(l[1].split('.').join(''), 10) >= 80,
+              p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+              s = i.devicePixelRatio || 1;
+            p || (d && d[1] > 534) || c || (s = 1);
+            var u = 1 / s,
+              m = r.querySelector('meta[name="viewport"]');
+            m ||
+              ((m = r.createElement('meta')),
+              m.setAttribute('name', 'viewport'),
+              r.head.appendChild(m)),
+              m.setAttribute(
+                'content',
+                'width=device-width,user-scalable=no,initial-scale=' +
+                  u +
+                  ',maximum-scale=' +
+                  u +
+                  ',minimum-scale=' +
+                  u
+              ),
+              (r.documentElement.style.fontSize = (a / 2) * s * n + 'px');
+          }),
+            (e.exports = t['default']);
+        }
+      ]);
+      //flex函数有误，100相当于50,200相当于100
+      flex(200, 1);
+    </script>
+  </head>
+  <body>
+    <h1>
+      移动端自适应字体 1px 解决方案 1rem = 100px
+
+      <p>
+        参见<a href="https://www.jianshu.com/p/e96ccb603a50"
+          >移动端h5之rem布局／px2rem</a
+        >
+        1px的边框在转化为rem时，在andriod webview以及部分低版本ios webview
+        会看不到。处理方法——让1px在编译后，依然是1px(这是脚本处理过viewpoint
+        的scale=1后的1px,不再是2px)
+      </p>
+    </h1>
+    <div>
+      <h2>移动端</h2>
+      <p>文本</p>
+      <div style="">
+        <div class="debug" style="text-align:center; margin-bottom:0.2rem;">
+          元素1 border-with=0.01rem 预计= 1px
+        </div>
+        <div style="text-align:center;border:1px solid green;">
+          元素2 border-with=1px 直接赋值
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
