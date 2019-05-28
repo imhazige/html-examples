@@ -48,5 +48,16 @@
         <div class="debug" style="margin:10px;">子元素</div>
       </div>
     </div>
+
+    <div>
+      <label>margin 为负数,box会移动,父元素的box大小会受影响</label>
+      <div class="debug" style="padding: 10px;">
+        <div class="debug" style="margin-left:300px;margin-top:-10px;">
+          子元素1
+        </div>
+        <div class="debug" style="margin:10px;">子元素2</div>
+        <div class="debug" style="margin:100px;">子元素3</div>
+      </div>
+    </div>
   </body>
 </html>
