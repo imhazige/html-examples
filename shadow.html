@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>阴影</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+      .h-center {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      阴影
+    </h1>
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"
+        >text-shadow</a
+      >
+      text-shadow 可以叠加，当写多个逗号分隔的text-shadow时，从前到后叠加
+      <br />
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">
+        box-shadow
+      </a>
+      <br />
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator"
+        >box shadow在线生成器</a
+      >
+    </p>
+    <!--  -->
+    <div>
+      <h2>text-shadow</h2>
+      <p></p>
+      <div class="debug" style="">
+        <div style="text-shadow:5px -5px 2px red,-5px 5px 2px green;">
+          文本 样本 文本
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div>
+      <h2>box-shadow</h2>
+      <p></p>
+      <div class="debug" style="">
+        <div
+          style="width:200px;box-shadow:5px -5px 2px red,-5px 5px 2px green;"
+        >
+          文本 样本 文本
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
