@@ -2,33 +2,71 @@
 <html>
   <head>
     <title>移动端 bulma</title>
-    <style>
-      * {
-        border: 0px solid red;
-        margin: 0px;
-        font-size: 0.1rem;
-      }
-      .debug {
-        border-width: 1px;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 国内CDN -->
+    <link
+      href="https://cdn.bootcss.com/bulma/0.7.5/css/bulma.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>
-      移动端自适应字体 bulma 解决方案
-
-      <p>
-        参见<a href="https://www.jianshu.com/p/e96ccb603a50"
-          >移动端h5之rem布局／px2rem</a
+      移动端自适应 bulma 解决方案
+    </h1>
+    <div class="section">
+      <h2>移动端自适应 bulma 解决方案</h2>
+      <p style="font-size:1rem">
+        参见<a href="https://bulma.io/documentation/overview/responsiveness/"
+          >bulma</a
         >
       </p>
-    </h1>
-    <div>
-      <h2>移动端</h2>
-      <p>文本</p>
-      <div style="">
-        <div class="debug" style="text-align:center;">
-          元素1
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification is-primary">
+                  <p class="title">Vertical...</p>
+                  <p class="subtitle">Top tile</p>
+                </article>
+                <article class="tile is-child notification is-warning">
+                  <p class="title">...tiles</p>
+                  <p class="subtitle">Bottom tile</p>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img
+                      src="https://bulma.io/images/placeholders/640x480.png"
+                    />
+                  </figure>
+                </article>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-danger">
+                <p class="title">Wide tile</p>
+                <p class="subtitle">Aligned with the right tile</p>
+                <div class="content">
+                  <!-- Content -->
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-success">
+              <div class="content">
+                <p class="title">Tall tile</p>
+                <p class="subtitle">With even more content</p>
+                <div class="content">
+                  <!-- Content -->
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
