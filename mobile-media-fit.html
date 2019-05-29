@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>移动端 media查询自适应 使用rem</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+        font-size: 0.3rem;
+      }
+      .debug {
+        border-width: 0.01rem;
+      }
+
+      html {
+        font-size: 38px;
+      }
+      @media only screen and (min-width: 320px) {
+        html {
+          font-size: 42.666px !important;
+        }
+      }
+      @media only screen and (min-width: 360px) {
+        html {
+          font-size: 48px !important;
+        }
+      }
+      @media only screen and (min-width: 375px) {
+        html {
+          font-size: 50px !important;
+        }
+      }
+      @media only screen and (min-width: 414px) {
+        html {
+          font-size: 55.2px !important;
+        }
+      }
+      @media only screen and (min-width: 480px) {
+        html {
+          font-size: 64px !important;
+        }
+      }
+      @media only screen and (min-width: 560px) {
+        html {
+          font-size: 74.666px !important;
+        }
+      }
+      @media only screen and (min-width: 640px) {
+        html {
+          font-size: 85.333px !important;
+        }
+      }
+      @media only screen and (min-width: 720px) {
+        html {
+          font-size: 96px !important;
+        }
+      }
+      @media only screen and (min-width: 750px) {
+        html {
+          font-size: 100px !important;
+        }
+      }
+      @media only screen and (min-width: 800px) {
+        html {
+          font-size: 106.666px !important;
+        }
+      }
+      @media only screen and (min-width: 960px) {
+        html {
+          font-size: 128px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      移动端自适应,比较老的解决方案
+    </h1>
+    <p>
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries"
+        >媒体查询</a
+      >
+    </p>
+    <div>
+      <h2>移动端</h2>
+      <p>文本</p>
+      <div style="">
+        <div class="debug" style="text-align:center; margin-bottom:0.2rem;">
+          元素1 border-with=0.01rem
+        </div>
+        <div style="text-align:center;border:1px solid green;">
+          元素2 border-with=1px
+        </div>
+        <div style="font-size: 0.2rem;">
+          元素3
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
