@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex布局</title>
+    <style>
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+
+      .altitems :nth-child(2n) {
+        background-color: #fab;
+      }
+      .altitems :nth-child(2n + 1) {
+        background-color: #ab7f21;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <p></p>
+    <!--  -->
+    <div>
+      <h2>
+        Flex 1
+      </h2>
+      <div style="height:100px;display:block; ">
+        <div class="debug altitems" style="display:flex;">
+          <div style="flex:1">元素1 flex:1</div>
+          <div style="flex:1">元素2 flex:1</div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div>
+      <h2>
+        Flex 2,让一个充满,另一个只显示内容所占空间
+      </h2>
+      <div style="height:100px;display:block; ">
+        <div class="debug altitems" style="display:flex;">
+          <div style="flex:1">元素1 flex:1</div>
+          <div style="">元素2 flex未指定</div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div>
+      <h2>
+        Flex 3,嵌套
+      </h2>
+      <div>
+        <div
+          class="debug altitems"
+          style="height:300px;display:flex;flex-direction:column;"
+        >
+          <div style="flex:1;display:flex;">
+            元素1 flex:1
+
+            <div style="">元素1.1 flex未指定</div>
+            <div style="">元素1.2 flex未指定</div>
+          </div>
+          <div style="">元素2 flex未指定</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
