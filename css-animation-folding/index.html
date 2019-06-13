@@ -54,12 +54,40 @@
         width: var(--imgwidth);
         height: calc(var(--imgheight) * 0.5);
       }
+
+      /* 
+      加上自动动画
+      https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+      */
+      @keyframes folding {
+        from {
+          transform: rotateX(0deg);
+        }
+
+        to {
+          transform: rotateX(180deg);
+        }
+      }
+
+      .show2 .half-2 {
+        animation-duration: 3s;
+        animation-name: folding;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
     </style>
   </head>
   <body style="width: 100%;">
     <!-- https://www.joshwcomeau.com/posts/folding-the-dom/ -->
     <div style="width:300px;margin: 0 auto;">
       <div class="folder-effect">
+        <div title="上半张" class="half-1">
+          <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
+        </div>
+        <div title="下半张" class="half-2"></div>
+      </div>
+
+      <div class="folder-effect show2">
         <div title="上半张" class="half-1">
           <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
         </div>
