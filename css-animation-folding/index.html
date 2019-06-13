@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>margin</title>
+    <title>折叠动画</title>
+    <meta charset="UTF-8" />
     <style>
       :root {
         --imgheight: calc(2688px * 0.2);
@@ -17,12 +18,18 @@
         border-width: 1px;
       }
 
+      .folder-effect {
+        /*用于折叠效果*/
+        perspective: 700px;
+      }
+
       .half-1 {
         background-size: var(--imgwidth) calc(var(--imgheight) * 0.5);
         background-image: var(--imgsrc);
 
         width: var(--imgwidth);
         height: calc(var(--imgheight) * 0.5);
+        /*内部图片全高度，溢出隐藏*/
         overflow: hidden;
       }
       .half-1 img {
@@ -38,24 +45,26 @@
         */
         background-position: 0px -100%;
 
-        transform: rotateX(0deg);
+        transform: rotateX(48deg);
         transform-origin: center top;
 
         /*优化*/
-        will-change: 'transform';
+        will-change: transform;
 
         width: var(--imgwidth);
         height: calc(var(--imgheight) * 0.5);
       }
     </style>
   </head>
-  <body>
+  <body style="width: 100%;">
     <!-- https://www.joshwcomeau.com/posts/folding-the-dom/ -->
-    <div class="folder-effect">
-      <div title="上半张" class="half-1">
-        <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
+    <div style="width:300px;margin: 0 auto;">
+      <div class="folder-effect">
+        <div title="上半张" class="half-1">
+          <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
+        </div>
+        <div title="下半张" class="half-2"></div>
       </div>
-      <div title="下半张" class="half-2"></div>
     </div>
   </body>
 </html>
