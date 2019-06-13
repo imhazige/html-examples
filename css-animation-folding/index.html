@@ -45,7 +45,7 @@
         */
         background-position: 0px -100%;
 
-        transform: rotateX(48deg);
+        transform: rotateX(100deg);
         transform-origin: center top;
 
         /*优化*/
@@ -53,6 +53,19 @@
 
         width: var(--imgwidth);
         height: calc(var(--imgheight) * 0.5);
+        /* 背部封皮效果 */
+        transform-style: preserve-3d;
+      }
+
+      .backface {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: rgba(255, 255, 255, 0.9);
+        backface-visibility: hidden;
+        transform: rotateX(180deg) translateZ(0.5px);
       }
 
       /* 
@@ -80,18 +93,24 @@
   <body style="width: 100%;">
     <!-- https://www.joshwcomeau.com/posts/folding-the-dom/ -->
     <div style="width:300px;margin: 0 auto;">
+      <!-- 原始解析 -->
       <div class="folder-effect">
         <div title="上半张" class="half-1">
           <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
         </div>
-        <div title="下半张" class="half-2"></div>
+        <div title="下半张" class="half-2">
+          <div title="背部封皮" class="backface"></div>
+        </div>
       </div>
 
+      <!-- 自动动画 -->
       <div class="folder-effect show2">
         <div title="上半张" class="half-1">
           <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
         </div>
-        <div title="下半张" class="half-2"></div>
+        <div title="下半张" class="half-2">
+          <div title="背部封皮" class="backface"></div>
+        </div>
       </div>
     </div>
   </body>
