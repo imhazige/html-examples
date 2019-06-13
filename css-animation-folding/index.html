@@ -3,6 +3,12 @@
   <head>
     <title>margin</title>
     <style>
+      :root {
+        --imgheight: calc(2688px * 0.2);
+        --imgwidth: calc(1242px * 0.2);
+        --imgsrc: url(./aeroegg.png);
+      }
+
       * {
         border: 0px solid red;
         margin: 0px;
@@ -12,21 +18,25 @@
       }
 
       .half-1 {
-        width: 200px;
-        height: 100px;
+        background-size: var(--imgwidth) calc(var(--imgheight) * 0.5);
+        background-image: var(--imgsrc);
+
+        width: var(--imgwidth);
+        height: calc(var(--imgheight) * 0.5);
+        overflow: hidden;
       }
       .half-1 img {
-        width: 200px;
-        height: 200px;
+        width: var(--imgwidth);
+        height: calc(var(--imgheight) * 1);
       }
       .half-2 {
-        background-size: 200px 50px;
-        background-image: url(./aeroegg.png);
+        background-size: var(--imgwidth) var(--imgheight);
+        background-image: var(--imgsrc);
 
         /**
         显示下半张
         */
-        background-position: 0px -50%;
+        background-position: 0px -100%;
 
         transform: rotateX(0deg);
         transform-origin: center top;
@@ -34,18 +44,18 @@
         /*优化*/
         will-change: 'transform';
 
-        width: 200px;
-        height: 100px;
+        width: var(--imgwidth);
+        height: calc(var(--imgheight) * 0.5);
       }
     </style>
   </head>
   <body>
     <!-- https://www.joshwcomeau.com/posts/folding-the-dom/ -->
     <div class="folder-effect">
-      <div class="half-1">
-        <img src="./aeroegg.png" />
+      <div title="上半张" class="half-1">
+        <img src="./aeroegg.png" alt="这图片只是为了accesibility" />
       </div>
-      <div class="half-2"></div>
+      <div title="下半张" class="half-2"></div>
     </div>
   </body>
 </html>
