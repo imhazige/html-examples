@@ -34,6 +34,16 @@
       .assembly {
         transform: rotateY(360deg) rotateZ(360deg) rotateX(20deg);
       }
+
+      @keyframes spin {
+        to {
+          transform: rotateY(360deg) rotateZ(360deg) rotateX(720deg);
+        }
+      }
+
+      .animation-spin {
+        animation: spin 4s linear infinite;
+      }
     </style>
   </head>
   <body style="width: 100%;">
@@ -48,7 +58,7 @@
       <div>
         <p>作为规则的桶，只需要桶身+桶盖两张图作为皮肤</p>
         <div title="作为纹理" style="position: relative; top:200px;">
-          <div class="threedee assembly">
+          <div class="threedee assembly animation-spin">
             <div
               class="threedee face"
               style='background: url("./drum2.png") 0px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(0px, 0px, 50px) rotateX(0rad) rotateY(0rad) rotateY(0rad);'
