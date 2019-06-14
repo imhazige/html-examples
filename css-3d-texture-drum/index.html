@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>圆通纹理</title>
+    <meta charset="UTF-8" />
+    <style>
+      :root {
+        --imgsrc: url(./drum2.png);
+      }
+
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+
+      .origin {
+        background-image: var(--imgsrc);
+        width: 312px;
+        height: 298px;
+      }
+
+      .threedee {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% 50%;
+        backface-visibility: hidden;
+      }
+
+      .assembly {
+        transform: rotateY(360deg) rotateZ(360deg) rotateX(20deg);
+      }
+    </style>
+  </head>
+  <body style="width: 100%;">
+    <!-- https://www.joshwcomeau.com/posts/folding-the-dom/ -->
+    <div style="width:300px;margin: 0 auto;">
+      <!-- 原始图 -->
+      <div>
+        <div title="原始图" class="origin"></div>
+      </div>
+
+      <!-- 作为纹理 -->
+      <div>
+        <p>作为规则的桶，只需要桶身+桶盖两张图作为皮肤</p>
+        <div title="作为纹理" style="display: relative; ">
+          <div class="threedee assembly">
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") 0px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(0px, 0px, 50px) rotateX(0rad) rotateY(0rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -15.84px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(15.45px, 0px, 47.55px) rotateX(0rad) rotateY(0.31rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -31.68px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(29.39px, 0px, 40.45px) rotateX(0rad) rotateY(0.63rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -47.52px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(40.45px, 0px, 29.39px) rotateX(0rad) rotateY(0.94rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -63.35px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(47.55px, 0px, 15.45px) rotateX(0rad) rotateY(1.26rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -79.19px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(50px, 0px, 0px) rotateX(0rad) rotateY(1.57rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -95.03px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(47.55px, 0px, -15.45px) rotateX(0rad) rotateY(1.88rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -110.87px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(40.45px, 0px, -29.39px) rotateX(0rad) rotateY(2.2rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -126.71px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(29.39px, 0px, -40.45px) rotateX(0rad) rotateY(2.51rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -142.55px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(15.45px, 0px, -47.55px) rotateX(0rad) rotateY(2.83rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -158.38px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(0px, 0px, -50px) rotateX(0rad) rotateY(3.14rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -174.22px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-15.45px, 0px, -47.55px) rotateX(0rad) rotateY(-2.83rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -190.06px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-29.39px, 0px, -40.45px) rotateX(0rad) rotateY(-2.51rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -205.9px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-40.45px, 0px, -29.39px) rotateX(0rad) rotateY(-2.2rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -221.74px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-47.55px, 0px, -15.45px) rotateX(0rad) rotateY(-1.88rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -237.58px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-50px, 0px, 0px) rotateX(0rad) rotateY(-1.57rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -253.42px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-47.55px, 0px, 15.45px) rotateX(0rad) rotateY(-1.26rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -269.25px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-40.45px, 0px, 29.39px) rotateX(0rad) rotateY(-0.94rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -285.09px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-29.39px, 0px, 40.45px) rotateX(0rad) rotateY(-0.63rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") -300.93px 0px; width: 16.84px; height: 196px; margin-top: -98px; margin-left: -8.42px; transform: translate3d(-15.45px, 0px, 47.55px) rotateX(0rad) rotateY(-0.31rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") 0px 100px; width: 100px; height: 100px; margin-top: -50px; margin-left: -50px; transform: translate3d(0px, -98px, 0px) rotateX(1.57rad) rotateY(0rad) rotateY(0rad);'
+            ></div>
+            <div
+              class="threedee face"
+              style='background: url("./drum2.png") 0px 100px; width: 100px; height: 100px; margin-top: -50px; margin-left: -50px; transform: translate3d(0px, 98px, 0px) rotateX(-1.57rad) rotateY(0rad) rotateY(0rad);'
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
