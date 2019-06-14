@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid布局</title>
+    <style>
+      :root {
+        --headerHeight: 60px;
+        --middleHeight: 100px;
+        --footerHeight: 20px;
+      }
+      * {
+        border: 0px solid red;
+        margin: 0px;
+      }
+      .debug {
+        border-width: 1px;
+      }
+
+      .altitems :nth-child(2n) {
+        background-color: #fab;
+      }
+      .altitems :nth-child(2n + 1) {
+        background-color: #ab7f21;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <p></p>
+    <!--  -->
+    <div>
+      <h2>
+        Grid 模拟经典页面布局 注意<a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/grid_areas"
+          >grid area</a
+        >
+      </h2>
+      <div style="display:block; ">
+        <div
+          style="display: grid;
+        grid-template: 'a b' auto / 1fr 3fr ;"
+        >
+          <div style="grid-area: a">
+            <div style="height: 100%;background-color:#3552b1;">Sidebar</div>
+          </div>
+          <div
+            style="grid-area: b;display: grid;
+          grid-template: 
+            '😁' 60px
+            '💛' var(--middleHeight)
+            'f' var(--footerHeight) /
+            100% ;"
+          >
+            <div style="grid-area: 😁; background-color:#ab7f21;">Header</div>
+            <div style="grid-area: 💛; background-color:#21ab38;">Content</div>
+            <div style="grid-area: f; background-color:#ab2166;">Footer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
